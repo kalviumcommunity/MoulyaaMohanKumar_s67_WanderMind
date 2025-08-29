@@ -1,7 +1,13 @@
 const genAI = require("../config/gemini");
 
 async function generateResume(userPrompt) {
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  // The generationConfig is now set to use topP
+  const model = genAI.getGenerativeModel({
+    model: "gemini-1.5-flash",
+    generationConfig: {
+      topP: 0.1,
+    },
+  });
 
   // Multi-shot prompt with a few examples
   const examples = `
@@ -42,9 +48,9 @@ The required JSON schema is:
 EXAMPLE 1
 User Details:
 ---
-My name is John Doe. I’m a Software Engineer at Google since 2021. 
-I specialize in JavaScript, React, and Node.js. 
-I studied Computer Science at MIT and graduated in May 2019. 
+My name is John Doe. I’m a Software Engineer at Google since 2021.
+I specialize in JavaScript, React, and Node.js.
+I studied Computer Science at MIT and graduated in May 2019.
 I hold an AWS Certified Solutions Architect certificate.
 ---
 
@@ -80,9 +86,9 @@ Expected JSON:
 EXAMPLE 2
 User Details:
 ---
-I’m Sarah Lee, a Marketing Manager at Meta since 2020. 
-I have experience in campaign strategy, SEO, and analytics. 
-I earned an MBA from Stanford in June 2018. 
+I’m Sarah Lee, a Marketing Manager at Meta since 2020.
+I have experience in campaign strategy, SEO, and analytics.
+I earned an MBA from Stanford in June 2018.
 I don’t have certifications.
 ---
 
