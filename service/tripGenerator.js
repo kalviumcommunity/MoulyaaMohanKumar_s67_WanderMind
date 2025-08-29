@@ -77,47 +77,8 @@ Expected JSON:
   ]
 }
 
-EXAMPLE 2
-User Details:
----
-I’m Sarah Lee, a Marketing Manager at Meta since 2020. 
-I have experience in campaign strategy, SEO, and analytics. 
-I earned an MBA from Stanford in June 2018. 
-I don’t have certifications.
----
 
-Expected JSON:
-{
-  "name": "Sarah Lee",
-  "title": "Marketing Manager",
-  "summary": "Marketing Manager with 4+ years of experience driving digital campaigns and brand growth. Skilled in SEO, analytics, and campaign strategy.",
-  "skills": ["Campaign Strategy", "SEO", "Analytics"],
-  "experience": [
-    {
-      "title": "Marketing Manager",
-      "company": "Meta",
-      "dates": "2020 - Present",
-      "responsibilities": ["Led digital marketing campaigns", "Optimized SEO strategy", "Analyzed campaign performance data"]
-    }
-  ],
-  "education": [
-    {
-      "degree": "MBA",
-      "institution": "Stanford University",
-      "graduation_date": "June 2018"
-    }
-  ],
-  "certifications": []
-}
 
----
-
-Now generate the JSON for this new user:
-
-User Details:
----
-${userPrompt}
----
 `;
 
   try {
