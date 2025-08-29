@@ -5,7 +5,7 @@ async function generateTravelItinerary(userPrompt) {
     model: "gemini-1.5-flash",
     // --- IMPLEMENTED topK and tuned temperature for structured output ---
     generationConfig: {
-      temperature: 0.2, // Low temperature for predictability
+      temperature: 0.7, // Low temperature for predictability
       topK: 40,         // Limits the AI's choices to the top 40 most likely words
     },
   });
