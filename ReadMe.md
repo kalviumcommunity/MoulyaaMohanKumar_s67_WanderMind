@@ -1,42 +1,81 @@
-🚀 Suggested Project Idea 
+WanderMind is an AI-powered travel planner that helps users design personalized trips. It suggests destinations, builds itineraries, finds attractions, and adapts to user preferences. Behind the scenes, it demonstrates prompting strategies, embeddings, vector databases, and similarity search (as required in your task list).
 
-StudyMate — Your AI Learning Companion
+🧠 Features (Mapped to Your Rubric)
 
-📚 Overview
-StudyMate is an intelligent AI-powered academic assistant that helps students learn smarter. It can generate study notes, summarize textbooks, quiz students, and even recommend personalized learning paths.
+One-shot prompting
 
-🧠 What StudyMate Can Do (Mapped to Your Rubric)
+Ask: “Plan a 3-day trip to Paris” → get a full itinerary in one response.
 
-One-shot prompting → Generate a summary of a topic in one go (e.g., “Explain Photosynthesis in simple words”).
+Multi-shot prompting
 
-Multi-shot prompting → Answer a question step by step with examples and follow-ups.
+Provide conversation history (preferences, budget, etc.) → AI refines the plan step by step.
 
-Dynamic prompting → Change response style dynamically (teacher mode, quick notes mode, quiz mode).
+Dynamic prompting
 
-Chain-of-thought prompting → Solve math or logical problems step by step.
+Adjusts based on user mood (“luxury travel”, “budget-friendly”, “adventure trip”).
 
-Evaluation dataset & testing framework → Compare outputs for multiple questions against expected summaries/answers.
+Chain-of-thought prompting
 
-Tokens & tokenization → Log token usage for each study query.
+For multi-step reasoning, e.g., selecting flights, then hotels, then attractions.
 
-Temperature / Top P / Top K → Control creativity in explanations (e.g., fun analogies vs. strict textbook style).
+Evaluation dataset & testing framework
 
-Stop sequence → Cut off explanations after a key section (like "only give summary, not examples").
+Test with a small dataset (5 trips) comparing expected vs. actual itineraries.
 
-Structured output → Generate structured JSON (e.g., {topic, key_points, summary, quiz_questions}).
+Tokens & tokenization logging
 
-Function calling → Call functions like generate_quiz(topic), fetch_notes(topic), etc.
+Log token count for each travel query.
 
-Embeddings → Convert notes into embeddings for better retrieval.
+Temperature control
 
-Vector database → Store all study notes in a vector DB for semantic search.
+Low temperature → factual itineraries.
 
-Cosine / L2 / Dot product similarity → Implement similarity checks between student queries and stored knowledge.
+High temperature → creative/fun itineraries.
+
+Top P
+
+Control randomness in destination suggestions.
+
+Top K
+
+Limit suggestions to “Top 3 attractions in Tokyo”.
+
+Stop sequence
+
+End output after “Day 3” in an itinerary.
+
+Structured output
+
+JSON format: {day, destination, activity, notes}.
+
+Function calling
+
+Functions like get_flights(city), get_hotels(city), get_attractions(city).
+
+Embeddings
+
+Convert travel guides into embeddings for semantic search.
+
+Vector database
+
+Store destinations/attractions for quick retrieval.
+
+Cosine similarity
+
+Find destinations similar to “Bali” (e.g., Phuket, Maldives).
+
+L2 Distance similarity
+
+Compare embeddings for “Rome food tour” vs. “Paris culinary experience.”
+
+Dot product similarity
+
+Rank user query against multiple attraction vectors.
 
 👥 Who It’s For
 
-Students preparing for exams.
+Tourists planning vacations.
 
-Teachers creating quick study material.
+Travel bloggers curating itineraries.
 
-Lifelong learners who want a personal AI tutor.
+Students or professionals who want weekend trip ideas.
