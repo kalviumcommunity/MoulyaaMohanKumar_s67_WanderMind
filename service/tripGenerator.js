@@ -10,7 +10,7 @@ async function generateItinerary(userPrompt) {
 
   // Multi-shot prompt with a travel-themed example
   const prompt = `
-You are WanderlustAI, an expert AI-powered travel planner.
+You are WanderMindAI, an expert AI-powered travel planner.
 Your task is to generate a detailed travel itinerary based ONLY on the user information provided.
 
 You MUST adhere strictly to the following JSON format. Do not add, remove, or rename any fields from this structure.
