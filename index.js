@@ -1,28 +1,23 @@
 // To use environment variables for your API key
 require("dotenv").config();
 
-const { generateResume } = require("./services/resumeGenerator");
+// Assuming your new file is named 'itineraryGenerator.js'
+const { generateItinerary } = require("./services/itineraryGenerator");
 
-// User details provided as a clear string
+// User details provided as a clear string for a travel plan
 const userPrompt = `
-Name: Vijay Kumar
-Title: Full Stack Developer
-Summary: Passionate developer with 3+ years of experience in building scalable web applications.
-Skills: JavaScript, React, Node.js, MongoDB, Express
-Experience:
-- Job Title: Software Engineer, Company: TechCorp, Dates: 2022 - 2025
-- Job Title: Intern, Company: WebWorld, Dates: 2021
-Education: B.Tech in Computer Science from a reputable university
-Certifications: Name: AWS Certified Developer, Organization: Amazon Web Services
+I want to plan a 5-day trip to Kerala. 
+I'm really interested in the backwaters in Alleppey, the tea plantations in Munnar, and relaxing on Varkala beach. 
+I'll be flying into Cochin.
 `;
 
 // Call the function and handle the response
-generateResume(userPrompt)
-  .then((resumeJson) => {
+generateItinerary(userPrompt)
+  .then((itineraryJson) => {
     // We parse the JSON string to work with it as an object
-    const resume = JSON.parse(resumeJson);
-    console.log("✅ Resume Generated Successfully!");
-    console.log(JSON.stringify(resume, null, 2)); // Pretty-print the JSON
+    const itinerary = JSON.parse(itineraryJson);
+    console.log("✅ Itinerary Generated Successfully!");
+    console.log(JSON.stringify(itinerary, null, 2)); // Pretty-print the JSON
   })
   .catch((err) => {
     console.error("❌ Error:", err);
