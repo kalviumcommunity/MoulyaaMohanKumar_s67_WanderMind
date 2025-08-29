@@ -5,7 +5,7 @@ async function generateTravelItinerary(userPrompt) {
     model: "gemini-1.5-flash",
     // Config is kept strict to guide the model without examples
     generationConfig: {
-      temperature: 0.2,
+      temperature: 0.7,
       topP: 0.85,
     },
   });
