@@ -75,7 +75,7 @@ ${unstructuredIdeas}
 
     const result = await model.generateContent({
         contents: [{ role: "user", parts: [{ text: structuringPrompt }] }],
-        generationConfig: { temperature: 0.1 }, // Low temp for precision
+        generationConfig: { temperature: 0.7 }, // Low temp for precision
     });
     return result.response.text();
 }
