@@ -1,4 +1,4 @@
-🚀 Suggested Project Idea
+🚀 Suggested Project Idea 
 
 StudyMate — Your AI Learning Companion
 
@@ -37,6 +37,6 @@ Cosine / L2 / Dot product similarity → Implement similarity checks between stu
 
 Students preparing for exams.
 
-Teachers creating quick study materials.
+Teachers creating quick study material.
 
 Lifelong learners who want a personal AI tutor.
